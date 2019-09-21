@@ -1,20 +1,40 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Carousel } from 'antd';
-import {Nav, Navbar, Form, FormControl, Button} from 'react-bootstrap';
+import {Nav, Navbar, Form, FormControl, Button, Dropdown, DropdownButton, ButtonGroup} from 'react-bootstrap';
+import {slide as menu} from 'react-burger-menu';
+import DropdownItem from "react-bootstrap/DropdownItem";
+import { isAbsolute } from "path";
+
+const styles ={
+    optionStyle: {
+        margin: '10px'
+    },  
+
+    stick2Right: {
+        position: 'absolute',
+        right: '50px'
+    },
+
+    centerLogo: {
+        position: 'relative',
+        left: '100px'
+    }
+}
 
 function Home() {
     return (
         <div>
             <top>
                 <Navbar bg="primary" variant="dark">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    </Nav>
-                    <Form inline>
+                    <ButtonGroup style={styles.optionStyle}>
+                        <DropdownButton as={ButtonGroup} title="options" id="bg-nested-dropdown">
+                            <Dropdown.Item eventKey="1">option 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="2">option 2</Dropdown.Item>
+                        </DropdownButton>
+                    </ButtonGroup>
+                    <Navbar.Brand href="#home" style={styles.centerLogo}>EBazaar</Navbar.Brand>                    
+                    <Form inline style={styles.stick2Right}>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-light">Search</Button>
                     </Form>
@@ -23,6 +43,7 @@ function Home() {
         </div>
     )
 }
+
 
 export default Home;
 //use the bootstrap carousel instead of antd
