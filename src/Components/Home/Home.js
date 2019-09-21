@@ -1,15 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Carousel } from 'antd';
-import {Nav, Navbar, Form, FormControl, Button, Dropdown, DropdownButton, ButtonGroup} from 'react-bootstrap';
-import {slide as menu} from 'react-burger-menu';
-import DropdownItem from "react-bootstrap/DropdownItem";
+import { 
+    Nav, 
+    Navbar, 
+    Form,
+    FormControl,
+    Button,
+    Dropdown,
+    DropdownButton, 
+    ButtonGroup,
+    Carousel
+} from 'react-bootstrap';
 import { isAbsolute } from "path";
 
-const styles ={
+const styles = {
     optionStyle: {
         margin: '10px'
-    },  
+    },
 
     stick2Right: {
         position: 'absolute',
@@ -18,7 +25,12 @@ const styles ={
 
     centerLogo: {
         position: 'relative',
-        left: '100px'
+        left: '10px'
+    },
+
+    signIn: {
+        position: 'relative',
+        left: '700px'
     }
 }
 
@@ -33,13 +45,57 @@ function Home() {
                             <Dropdown.Item eventKey="2">option 2</Dropdown.Item>
                         </DropdownButton>
                     </ButtonGroup>
-                    <Navbar.Brand href="#home" style={styles.centerLogo}>EBazaar</Navbar.Brand>                    
+                    <Navbar.Brand href="#home" style={styles.centerLogo}>EBazaar</Navbar.Brand>
                     <Form inline style={styles.stick2Right}>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-light">Search</Button>
                     </Form>
+                    <Nav>
+                        <Nav.Link style={styles.signIn}>Sign In</Nav.Link>
+                    </Nav>
                 </Navbar>
             </top>
+
+            <underTop>
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            //className="d-block w-100"
+                            src="https://picsum.photos/id/237/30/40"
+                            alt="First slide"
+                            //carousel image size need alot of improvement
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://picsum.photos/id/287/100/80"
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://picsum.photos/id/297/100/80"
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </underTop>
         </div>
     )
 }
