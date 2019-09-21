@@ -15,7 +15,7 @@ import { isAbsolute } from "path";
 
 const styles = {
     optionStyle: {
-        margin: '10px'
+        //margin: '10px'
     },
 
     stick2Right: {
@@ -31,6 +31,11 @@ const styles = {
     signIn: {
         position: 'relative',
         left: '700px'
+    },
+    
+    cItem: {
+        display: 'flex',
+        justifyContent: 'center'
     }
 }
 
@@ -58,23 +63,28 @@ function Home() {
 
             <underTop>
                 <Carousel>
-                    <Carousel.Item>
+                    <Carousel.Item style={styles.cItem}>
                         <img
-                            //className="d-block w-100"
-                            src="https://picsum.photos/id/237/30/40"
+                            //className="d-block"
+                            src="https://picsum.photos/id/1006/3000/2000"
                             alt="First slide"
-                            //carousel image size need alot of improvement
+                            width="900px"
+                            height="400px"                            
                         />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
+                    <Carousel.Item style={styles.cItem}>
                         <img
-                            className="d-block w-100"
-                            src="https://picsum.photos/id/287/100/80"
+                            //className="d-block w-100"
+                            src="https://picsum.photos/id/1025/4951/3301"
                             alt="Third slide"
+                            width="900px"
+                            margin-left="auto"
+                            margin-right="auto"
+                            height="400px"
                         />
 
                         <Carousel.Caption>
@@ -82,11 +92,13 @@ function Home() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
+                    <Carousel.Item style={styles.cItem}>
                         <img
-                            className="d-block w-100"
-                            src="https://picsum.photos/id/297/100/80"
+                            //className="d-block w-100"
+                            src="https://picsum.photos/id/1024/1920/1280"
                             alt="Third slide"
+                            width="900px"
+                            height="400px"
                         />
 
                         <Carousel.Caption>
