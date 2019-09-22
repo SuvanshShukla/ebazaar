@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { 
-    Nav, 
-    Navbar, 
+import {
+    Nav,
+    Navbar,
     Form,
     FormControl,
     Button,
     Dropdown,
-    DropdownButton, 
+    DropdownButton,
     ButtonGroup,
     Carousel
 } from 'react-bootstrap';
@@ -32,10 +32,10 @@ const styles = {
         position: 'relative',
         left: '700px'
     },
-    
-    cItem: {
-        display: 'flex',
-        justifyContent: 'center'
+
+    cStyle: {
+        display: 'block',
+        margin: '0 auto'
     }
 }
 
@@ -63,28 +63,23 @@ function Home() {
 
             <underTop>
                 <Carousel>
-                    <Carousel.Item style={styles.cItem}>
+                    <Carousel.Item>
                         <img
-                            //className="d-block"
-                            src="https://picsum.photos/id/1006/3000/2000"
+                            style={styles.cStyle}
+                            src="https://picsum.photos/800/400"
                             alt="First slide"
-                            width="900px"
-                            height="400px"                            
+                            align="middle"
                         />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item style={styles.cItem}>
+                    <Carousel.Item>
                         <img
-                            //className="d-block w-100"
-                            src="https://picsum.photos/id/1025/4951/3301"
+                            style={styles.cStyle}
+                            src="https://picsum.photos/800/400"
                             alt="Third slide"
-                            width="900px"
-                            margin-left="auto"
-                            margin-right="auto"
-                            height="400px"
                         />
 
                         <Carousel.Caption>
@@ -92,13 +87,11 @@ function Home() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item style={styles.cItem}>
+                    <Carousel.Item>
                         <img
-                            //className="d-block w-100"
-                            src="https://picsum.photos/id/1024/1920/1280"
+                            style={styles.cStyle}
+                            src="https://picsum.photos/800/400"
                             alt="Third slide"
-                            width="900px"
-                            height="400px"
                         />
 
                         <Carousel.Caption>
