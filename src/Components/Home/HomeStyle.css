@@ -1,0 +1,50 @@
+.hrStyle {
+    border-width: 3px
+}
+
+.hrStyle2 {
+    position: absolute;
+    border-width: 3px;
+    top: 10px
+}
+
+/* .optionStyle {
+    margin: 10px;
+} */
+
+.stick2Right {
+    position: absolute;
+    right: 50px
+}
+
+.centerLogo {
+    padding-left: 10px;
+    position: 'relative';
+    left: 10px
+}
+
+.signIn {
+    position: relative;
+    left: 700px
+}
+
+.imgStyle {
+    display: block;
+    margin: auto
+}
+
+.contStyle{
+    position: relative;
+    top: 25px
+}
+
+.rowStyle {
+    display: flex;
+    justify-content: space-around
+}
+
+.colStyle {
+    border-radius: 25px;
+    border-style: dotted;
+    padding: 20px
+}
